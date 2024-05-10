@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Passing JS Variable to PHP</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+    <script>
+        var jsVariable = "Hello, PHP!";
+
+        // Using jQuery AJAX
+        $.ajax({
+            type: 'POST',
+            url: 'process_menu.php',
+            data: { jsVariable: jsVariable },
+            success: function(response) {
+                console.log(response);
+            }
+        });
+    </script>
+
+</body>
+</html>
